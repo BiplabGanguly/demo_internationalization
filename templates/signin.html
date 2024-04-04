@@ -7,6 +7,11 @@
 </head>
 <body>
     signin
-    <a href="{% url 'home' %}">home</a>
+    <form action="{% url 'verify' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username"><br><br>
+        <input type="text" name="pass"><br><br>
+        <button type="submit">submit</button>
+    </form>
 </body>
 </html>

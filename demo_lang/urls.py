@@ -23,9 +23,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.signin,name="signin"),
     path('signup/',views.signup,name="signup"),
+    path('verify/',views.varify_user,name="verify"),
+    path('change/',views.change_lang,name="language")
 ]
 
-urlpatterns = i18n_patterns(
+urlpatterns += i18n_patterns(
     path('home/',views.home,name='home'),
     path('about/',views.about,name='about'),
     path('contact/',views.contact,name='contact'),
